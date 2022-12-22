@@ -22,12 +22,12 @@ const router = express.Router();
 // });
 
 //UPDATE
-router.put("/:id", verifyToken, updateUser);
+router.put("/:id", verifyUser, updateUser);
 //DELETE
-router.delete("/:id", verifyToken, deleteUser);
+router.delete("/:id", verifyUser, deleteUser);
 //GET
 router.get("/:id",verifyUser, getUser);
 //GET ALL
-router.get("/",verifyAdmin ,getAllUser);
+router.get("/" ,getAllUser);
 
 export default router;

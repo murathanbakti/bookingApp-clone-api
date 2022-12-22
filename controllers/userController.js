@@ -36,7 +36,7 @@ export const getUser = async (req, res, next) => {
 export const getAllUser = async (req, res, next) => {
   try {
     const users = await User.find();
-    res.status(200).json(user);
+    res.status(200).json(users);
   } catch (err) {
     next(err);
   }
